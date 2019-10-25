@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+  <head>
+   <title>Switch Button - CSS</title>
+  </head>
+
+ <style>
+
+  	* {
+  		margin: 0;
+  		padding: 0;
+  		box-sizing: border-box;
+  	}
+
+  	body {  		
+  		background-color: #FF9C87;
+  	}
+
+	.switch {	 		
+		position: relative;
+		margin-left: -9999px;
+		visibility: hidden;        
+     }
+
+	.switch + label {
+	  position: absolute;
+	  display: block;	  
+	  cursor: pointer;
+	  outline: none;
+	  user-select: none;
+	  top: 50%;
+	  left: 50%;
+	  transform: translate(-50%, -50%);
+	}
+
+	.switch--shadow + label {
+	  padding: 2px;
+	  width: 120px;
+	  height: 60px;
+	  background-color: #dddddd;
+	  border-radius: 60px; 	  	 
+	}
+
+	.switch--shadow + label:before,
+	.switch--shadow + label:after {
+	  display: block;
+	  position: absolute;
+ 	  top: 1px;
+	  left: 1px;
+	  bottom: 1px;
+	  content: "";
+	}
+
+	.switch--shadow + label:before {
+	  right: 1px;
+	  background-color: #f1f1f1;
+	  border-radius: 60px;
+	  transition: all 0.4s;
+	}		
+
+	.switch--shadow + label:after {	
+ 	  width: 62px;
+	  background-color: #fff;
+	  border-radius: 50%;
+	  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+	  transition: all 0.3s;
+	}
+
+	.switch--shadow:checked + label:before {
+	  background-color: #4DB38B;	
+	}
+
+	.switch--shadow:checked + label:after {
+	  transform: translateX(60px);
+	}		
+  </style>
+
+  <body>
+    
+      <input id="switch-shadow" class="switch switch--shadow" type="checkbox">
+      <label for="switch-shadow"></label>    
+  <body>
+<html>
